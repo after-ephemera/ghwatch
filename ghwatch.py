@@ -254,7 +254,8 @@ def draw(notifications):
             # RepositoryInvitation: ?
             if rec.subject.type not in {'Release', 'RepositoryInvitation'}: # Huh
                 print(rec.subject.type, rec.subject.url)
-                assert(False)
+                # TODO: make this work for more esoteric notifications like CheckSuite
+                continue
             issue = None
             meta = None
 
